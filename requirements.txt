@@ -1,10 +1,29 @@
-nicegui>=1.3.12
-polars>=0.20.16
-duckdb>=0.10.0
-psycopg[binary]>=3.1.17
-chromadb>=0.4.24
-pydantic>=2.7.1
-python-dotenv>=1.0.1
-requests>=2.32.2
+# Core backend + MCP
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7
 httpx>=0.27.0
-uvicorn>=0.30.0
+
+# Frontend UI
+nicegui>=1.4.18
+
+# Data processing
+polars>=0.20.30
+
+# LLM + AI tooling (local)
+ollama>=0.1.6
+langchain-community>=0.0.36
+langchain-core>=0.1.70
+chromadb>=0.4.24  # Optional, can be removed if using only Postgres
+sentence-transformers>=2.7.0
+
+# Utility
+python-dotenv>=1.0.1
+duckdb>=0.10.2
+
+# Dev experience (can be removed later in prod)
+rich>=13.7.1
+typer>=0.12.3
+
+# VS Code Agent support (Continue & others)
+openai>=1.30.1  # Needed only if using OpenAI fallback or plugin
